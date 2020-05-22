@@ -7,9 +7,10 @@ pseudocode with respect to the input size n of each of the following:
 
 ```python
 a)  a = 0
-    while (a < n * n * n):
+    while (a < n * n * n): 
       a = a + n * n
 ```
+
 
 
 ```
@@ -34,3 +35,10 @@ c)  def bunnyEars(bunnies):
 Suppose that you have an n-story building and plenty of eggs. Suppose also that an egg gets broken if it is thrown off floor f or higher, and doesn't get broken if dropped off a floor less than floor f. Devise a strategy to determine the value of f such that the number of dropped + broken eggs is minimized.
 
 Write out your proposed algorithm in plain English or pseudocode AND give the runtime complexity of your solution.
+
+
+I would approach this using a binary search technique. I would start at the middle floor, drop an egg, if it breaks, move to the middle of the lower half, and so forth.
+If it doesn't break, I would find the midpoint of the upper half, and continue in the same fashion.
+this would continue until we find the point where the egg breaks at f, but not f-1
+
+This would run in O(logn) time 
