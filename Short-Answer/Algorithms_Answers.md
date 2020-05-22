@@ -13,4 +13,8 @@ c) O(n) since each recursion decreases n by 1
 
 ## Exercise II
 
+I would approach this using a binary search technique. I would start at the middle floor, drop an egg, if it breaks, move to the middle of the lower half, and so forth.
+If it doesn't break, I would find the midpoint of the upper half, and continue in the same fashion.
+this would continue until we find the point where the egg breaks at f, but not f-1
 
+This would run in O(logn) time 
